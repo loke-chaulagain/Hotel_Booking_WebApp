@@ -50,7 +50,7 @@ export const login = async (req, res, next) => {
                 //hiding the password from the response
                 const { password, ...others } = user._doc;
                 //saving this token in cookies
-                res.cookie("access_token", token, { httpOnly: true }).status(200).json(others)
+                res.cookies("access_token", token, { httpOnly: true }).status(200).json(others)
 
 
 
