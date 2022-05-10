@@ -1,7 +1,32 @@
-import React from 'react'
+import express from 'express';  //es6 module
+const app = express();
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
+import authRoute from "./routes/auth.js"
+import usersRoute from "./routes/users.js"
+import hotelsRoute from "./routes/hotels.js"
+import roomsRoute from "./routes/rooms.js"
 
-export default function index() {
-  return (
-    <div>index</div>
-  )
-}
+
+//json parser
+app.use(express.json());
+
+
+//MonogoDB connection
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => console.log("MonogoDB connection Successful"))
+    .catch((error) => console.log({ msg: "MongoDB Disconnected", error }));
+
+
+//Middlewares
+app.use("/api/auth", authRoute)
+app.use("/api/users", usersRoute)
+app.use("/api/hotels", hotelsRoute)
+app.use("/api/rooms", roomsRoute)
+
+
+//Port Listening
+app.listen(process.env.PORT, () => {
+    console.log("Backend server is running on port " + process.env.PORT);
+})
