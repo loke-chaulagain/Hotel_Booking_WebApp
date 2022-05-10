@@ -1,5 +1,6 @@
 import express from 'express';
 import Hotel from '../models/Hotel.js';
+import { createError } from '../utils/error.js';
 const router = express.Router();
 
 
@@ -19,10 +20,16 @@ router.post("/", async (req, res) => {
 
 
 //Update a hotel
-router.put("/:id", async (req, res) => {
+router.put("/update/:id", async (req, res) => {
     try {
+
+        // if (post.userId === req.body.userId) {
         const updatedHotel = await Hotel.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
         res.status(200).json(updatedHotel);
+        // }
+        // else {
+        //     res.status(401).json("Unauthorized")
+        // }
 
     } catch (error) {
         res.status(500).json(error)
@@ -46,11 +53,11 @@ router.delete("/:id", async (req, res) => {
 
 
 //Get a hotel
-router.get("/find/:id", async(req, res)=>{
+router.get("/find/:id", async (req, res) => {
     try {
         const hotel = await Hotel.findById(req.params.id)
         res.status(200).json(hotel);
-        
+
     } catch (error) {
         res.status(500).json(error)
     }
@@ -59,13 +66,17 @@ router.get("/find/:id", async(req, res)=>{
 
 
 //Get all hotels
-router.get("/findAll",async(req, res)=>{
+router.get("/findAll", async (req, res, next) => {
+
+    //tryCatch vanda agadi nai failed vaiskyo vane
+    // const failed = true
+    // if (failed) return next(createError(401, "Unauthorized"))
+
     try {
         const hotels = await Hotel.find()
         res.status(200).json(hotels);
-    
     } catch (error) {
-        res.status(500).json(error)
+        next(error)
     }
 })
 
