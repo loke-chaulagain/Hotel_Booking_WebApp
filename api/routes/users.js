@@ -5,14 +5,10 @@ const router = express.Router();
 
 
 
-//
 router.get("/checkauthentication",verifyToken,(req,res,next)=>{
     res.send("Hello, you are authenticated")
 
 })
-
-
-
 
 
 //Update User

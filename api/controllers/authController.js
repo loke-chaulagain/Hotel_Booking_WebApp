@@ -4,14 +4,12 @@ import { createError } from '../utils/error.js';
 import jwt from 'jsonwebtoken';
 
 
-
-
 //Register
 export const register = async (req, res, next) => {
     try {
-        //create genSalt
+        //create salt
         const salt = await bcrypt.genSalt(10);
-        //create hash
+        //hash password
         const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
         const newUser = new User({
@@ -23,7 +21,7 @@ export const register = async (req, res, next) => {
         res.status(201).json({ msg: "User has been created", savedUser })
 
     } catch (error) {
-        next()
+        next(error)
     }
 }
 
@@ -44,20 +42,15 @@ export const login = async (req, res, next) => {
             if (validPassword) {
 
                 //if password is correct create jwt token
-                const token = jwt.sign({ id: user._id, isAdmin: user.isAdmin }, process.env.JWT_SECRET)
+                const token = jwt.sign({ id: user._id, isAdmin: user.isAdmin }, process.env.JWT_SECRET, { expiresIn: "7d" })
 
-                
                 //hiding the password from the response
                 const { password, ...others } = user._doc;
                 //saving this token in cookies
-                res.cookies("access_token", token, { httpOnly: true }).status(200).json(others)
-
-
-
+                res.cookie("access_token", token, { httpOnly: true }).status(200).json(others)
             } else {
                 next(createError(401, "Invalid password"))
             }
-
         } else {
             return next(createError(404, "User does not exist"))
         }
