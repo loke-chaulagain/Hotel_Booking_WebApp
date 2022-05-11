@@ -1,0 +1,26 @@
+.footer {
+
+    .footerListCon {
+        padding: 50px 220px;
+        display: flex;
+
+        .footerList {
+            width: 100%;
+
+            .footerListItem {
+                margin-bottom: 10px;
+                list-style: none;
+                font-size: 14px;
+                color: #0071c2;
+                cursor: pointer;
+                padding-bottom: 3px;
+
+                &:hover{
+                    border-bottom: 2px solid #0071c2;
+                    width: 80px;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}

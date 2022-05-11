@@ -1,0 +1,66 @@
+.guestHotel {
+    .guestHotelWrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 30px;
+
+        .guestHotelItem {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .guestHotelImg {
+                width: 270px;
+                height: 270px;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-right: 10px;
+            }
+
+            .guestHotelPropertyName {
+                font-size: 16px;
+                color: rgb(107, 107, 107);
+                margin-top: 10px;
+            }
+
+            .guestHotelPropertyCity {
+                font-size: 16px;
+                color: rgb(107, 107, 107);
+                margin-top: 5px;
+            }
+
+            .guestHotelPropertyPrice {
+                font-size: 16px;
+                color: rgb(32, 32, 32);
+                font-weight: 600;
+                margin-top: 12px;
+            }
+
+            .guestHotelRatingDiv {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                margin-top: 8px;
+
+                .ratingContainer {
+                    width: 28px;
+                    height: 28px;
+                    background-color: blue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 600;
+                    border-radius: 5px;
+                    margin-right: 12px;
+                }
+                .ratingTxt {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.featured {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+
+    .featuredItem {
+        position: relative;
+        
+        .featuredImg {
+            width: 200px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        
+        }
+        
+        .featuredTitle {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+
+            .featuredPlaceName{
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            .propertiesNum{
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+    }
+}

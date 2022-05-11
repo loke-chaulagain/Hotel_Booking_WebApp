@@ -1,0 +1,66 @@
+.mail {
+    width: 100%;
+    background-color: #00224f;
+
+    .mailWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .mailTitle {
+            font-size: 32px;
+            color: white;
+            font-weight: 400;
+            margin-top: 60px;
+        }
+
+        .mailSubTitle {
+            font-size: 16px;
+            color: rgb(221, 218, 218);
+            margin-top: 8px;
+        }
+
+        .emailAndSubscribe {
+            margin-top: 20px;
+            display: flex;
+            // align-items: center;
+
+            .mailInput {
+                width: 400px;
+                height: 38px;
+                padding-left: 10px;
+                margin-right: 2px;
+            }
+            .subscribeCon {
+                width: 140px;
+                height: 42px;
+                background-color: #0071c2;
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+        .checkBoxAndTxt {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+
+            .checkBox{
+                cursor: pointer;
+            }
+            
+
+            .checkboxTxt {
+                color: white;
+                font-size: 14px;
+                margin-left: 10px;
+            }
+        }
+    }
+}

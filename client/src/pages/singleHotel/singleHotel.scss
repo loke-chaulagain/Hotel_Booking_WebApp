@@ -1,0 +1,149 @@
+.singleHotelPage {
+    height: 500vh;
+
+    .shContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // width: 100%;
+        // max-width: 1024px;
+        padding: 20px 210px;
+
+        .shWrapper {
+            display: flex;
+            flex-direction: column;
+
+            .shRow1 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .shTitle {
+                    font-size: 28px;
+                    font-weight: 700;
+                }
+                .shButton {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: white;
+                    height: 40px;
+                    background-color: #0071c2;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    padding: 14px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .shAddress {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                color: rgb(43, 43, 43);
+                margin-top: 8px;
+
+                .shIcon {
+                    font-size: 16px;
+                    color: rgb(43, 43, 43);
+                    margin-right: 5px;
+                }
+            }
+
+            .shHotelDistance {
+                margin-top: 8px;
+                font-size: 18px;
+                font-weight: 600;
+                color: #0071c2;
+            }
+
+            .shHotelOfferHighlight {
+                margin-top: 8px;
+                font-size: 18px;
+                font-weight: 600;
+                color: green;
+            }
+
+            .hotelImageGallery{
+                margin-top: 15px;
+                .shImage{
+                    width:355px;
+                    height:200px;
+                    margin-right: 10px;
+                    margin-top: 5px;
+                }
+
+            }
+
+            .shDetailAndPriceRow {
+                display: flex;
+                margin-top: 30px;
+
+                .shDetail {
+                    display: flex;
+                    flex-direction: column;
+
+                    .shDetailTitle{
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                    .shDetailText{
+                        font-size: 16px;
+                        margin-top: 10px;
+                    }
+                    
+                }
+
+                .shPriceCon {
+                
+                    padding: 20px;
+                    background-color: #bedcf1;
+                    display: flex;
+                    flex-direction: column;
+
+                    .shPriceTitle {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: rgb(62, 61, 61);
+                    }
+                    .shPriceDesc {
+                        font-size: 16px;
+                        margin-top: 10px;
+                    }
+                    .shPriceAndNight {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 10px;
+
+                        .shPrice {
+                            font-size: 20px;
+                            font-weight: 700;
+                            color: rgb(44, 44, 44);
+                            margin-right: 6px;
+                        }
+                        .shNight {
+                            font-size: 18px;
+                        }
+                    }
+                    .shButton {
+                        margin-top: 20px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: white;
+                        height: 40px;
+                        background-color: #0071c2;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;
+                        padding: 14px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

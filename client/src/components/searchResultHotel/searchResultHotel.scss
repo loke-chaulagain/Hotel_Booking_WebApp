@@ -1,0 +1,133 @@
+.searchResultHotel {
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.73);
+    -webkit-box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.73);
+    -moz-box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.73);
+    margin-bottom: 16px;
+
+    .searchResultHotelWrapper {
+        padding: 10px;
+        display: flex;
+
+        .SRImg {
+            height: 230px;
+            width: 210px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .searchHotelRight {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+
+            .row1 {
+                display: flex;
+                align-items: center;
+
+                .SRAppartmentName {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #2358a3;
+                }
+
+                .SRRatingTxt {
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-left: 94px;
+                }
+
+                .SRRate {
+                    display: flex;
+                    width: 25px;
+                    height: 25px;
+                    background-color: blue;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 4px;
+                    margin-left: 98px;
+                    padding: 2px;
+                }
+            }
+            .SRdistance {
+                font-size: 14px;
+                color: rgb(56, 56, 56);
+                margin-top: 5px;
+            }
+            .SRfreeTaxi {
+                color: white;
+                background-color: green;
+                width: 110px;
+                height: 26px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6px;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+            .SRfacility {
+                font-weight: 600;
+                margin-top: 10px;
+            }
+            .Row2 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 10px;
+
+                .Row2ko1 {
+                    font-weight: 100;
+                    color: rgb(56, 55, 55);
+                }
+
+                .Row2ko2 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: rgb(30, 29, 29);
+                }
+            }
+
+            .Row3 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .Row3ko2 {
+                    font-size: 14px;
+                    color: rgb(30, 29, 29);
+                }
+                .Row3ko1 {
+                    font-size: 16px;
+                    color: green;
+                    font-weight: 600;
+                }
+            }
+
+            .Row4 {
+                display: flex;
+                // align-items: center;
+                justify-content: space-between;
+                margin-top: 10px;
+                color: green;
+
+                .Row4ko2 {
+                    width: 130px;
+                    height: 40px;
+                    background-color: #2358a3;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    color: white;
+                    font-size: 14px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

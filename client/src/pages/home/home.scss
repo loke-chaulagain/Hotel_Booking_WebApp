@@ -1,0 +1,26 @@
+.home {
+    overflow-y: hidden;
+
+    .homeWrapper {
+        display: flex;
+        margin-top: 40px;
+        flex-direction: column;
+        padding: 0px 220px;
+        overflow-y: hidden;
+
+        .browseByProperty{
+            font-size: 26px;
+            font-weight: 600;
+            color: rgb(45, 44, 44);
+            margin-top: 50px;
+        }
+
+        .homesGuests{
+            font-size: 26px;
+            font-weight: 600;
+            color: rgb(45, 44, 44);
+            margin-top: 50px;
+            
+        }
+    }
+}

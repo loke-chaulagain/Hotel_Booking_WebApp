@@ -1,0 +1,26 @@
+.propertyList {
+    display: flex;
+    justify-content: space-between;
+
+    .propertyListItem {
+        display: flex;
+        flex-direction: column;
+
+        .propertyListItemImg {
+            width: 212px;
+            height: 220px;
+            border-radius: 10px;
+            display: flex;
+            margin-right: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .propertyTitle{
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgb(32, 31, 31);
+        }
+    }
+}
