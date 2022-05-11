@@ -7,7 +7,7 @@ export const updateUser = async (req, res, next) => {
         const updatedUser = await User.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
         res.status(200).json(updatedUser);
     } catch (error) {
-        next()
+        next(error)
     }
 }
 
@@ -18,7 +18,7 @@ export const deleteUser = async (req, res, next) => {
         const deletedUser = await User.findByIdAndDelete(req.params.id)
         res.status(200).json({ msg: "This User has been deleted", deletedUser });
     } catch (error) {
-        next()
+        next(error)
     }
 }
 
@@ -29,7 +29,7 @@ export const getUser = async (req, res, next) => {
         const user = await User.findById(req.params.id)
         res.status(200).json(user);
     } catch (error) {
-        next()
+        next(error)
     }
 }
 
@@ -40,6 +40,6 @@ export const getAllUser = async (req, res, next) => {
         const users = await User.find()
         res.status(200).json(users);
     } catch (error) {
-        next()
+        next(error)
     }
 }

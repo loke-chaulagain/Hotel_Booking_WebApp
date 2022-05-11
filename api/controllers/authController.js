@@ -41,13 +41,20 @@ export const login = async (req, res, next) => {
             //if password is valid
             if (validPassword) {
 
-                //if password is correct create jwt token
+                //if password is correct Create jwt token
                 const token = jwt.sign({ id: user._id, isAdmin: user.isAdmin }, process.env.JWT_SECRET, { expiresIn: "7d" })
+                // const token = jwt.sign({ id: user._id.toString, email: user.email, isAdmin: user.isAdmin }, "lokendra", { expiresIn: "2h" })
 
                 //hiding the password from the response
                 const { password, ...others } = user._doc;
-                //saving this token in cookies
+
+                //saving this token in cookie
                 res.cookie("access_token", token, { httpOnly: true }).status(200).json(others)
+                // res.status(200)
+                //     .cookie("access_token", token, { httpOnly: true })
+                //     .json({ msg: "user login", others })
+
+
             } else {
                 next(createError(401, "Invalid password"))
             }
