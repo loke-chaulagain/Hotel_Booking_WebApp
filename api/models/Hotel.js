@@ -49,7 +49,8 @@ const HotelSchema = new mongoose.Schema({
         max: 5,
     },
     rooms: {
-        type: [String]    //room ko long id as string
+        type: [String]   //room id
+        //after creating room, add room id to this array
     },
     cheapestPrice: {
         type: Number,
