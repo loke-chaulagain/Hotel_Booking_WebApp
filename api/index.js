@@ -8,13 +8,12 @@ import usersRoute from "./routes/users.js"
 import hotelsRoute from "./routes/hotels.js"
 import roomsRoute from "./routes/rooms.js"
 import cookieParser from 'cookie-parser';
-// import cors from 'cors';
 
 
-// app.use(cors());
+
 //json parser
 app.use(express.json());
-app.use(cookieParser())
+app.use(cookieParser())  //note this should always be on top of all middlewares
 
 
 
@@ -24,6 +23,7 @@ mongoose.connect(process.env.MONGODB_URI)
     .catch((error) => console.log({ msg: "MongoDB Disconnected", error }));
 
 
+    
 //Middlewares
 app.use("/api/auth", authRoute)
 app.use("/api/users", usersRoute)
