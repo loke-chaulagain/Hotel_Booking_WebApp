@@ -3,6 +3,8 @@ import Navbar from '../../components/navbar/Navbar'
 import SmallHeader from '../../components/smallHeader/SmallHeader'
 import "./singleHotel.scss"
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import Mail from '../../components/mail/Mail';
+import Footer from '../../components/footer/Footer';
 
 
 
@@ -56,6 +58,8 @@ function SingleHotel() {
 
         </div>
       </div>
+      <Mail/>
+      <Footer/>
     </div>
   )
 }
